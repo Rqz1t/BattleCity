@@ -19,6 +19,9 @@ namespace Renderer {
 		ShaderProgram(ShaderProgram&& shaderProgram) noexcept;
 
 	private:
+		std::string getFileString(const std::string& relativeFilePath);
+
+
 		bool createShader(const std::string& source, const GLenum ShaderType, GLuint& shaderID);
 		bool m_isCompiled = false;
 		GLuint m_ID = 0;
